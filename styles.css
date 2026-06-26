@@ -1,9 +1,3 @@
-/* ============================================================
-   Save Our Wildlife - styles.css
-   Demonstrates responsive design and accessibility.
-   ============================================================ */
-
-/* ----- Base / reset ----- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,9 +19,6 @@ body {
   background-color: var(--bg);
 }
 
-/* ----- Accessibility helpers ----- */
-
-/* Visible only when focused: lets keyboard users jump to content */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -42,7 +33,6 @@ body {
   left: 0;
 }
 
-/* Hidden visually but still read by screen readers */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -55,7 +45,6 @@ body {
   white-space: nowrap;
 }
 
-/* Clear, consistent focus outline for keyboard navigation */
 a:focus,
 button:focus,
 video:focus {
@@ -63,7 +52,6 @@ video:focus {
   outline-offset: 2px;
 }
 
-/* ----- Layout ----- */
 .site-header {
   background: linear-gradient(135deg, var(--green), var(--green-light));
   color: #fff;
@@ -72,7 +60,7 @@ video:focus {
 }
 
 .site-header h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem); /* fluid, responsive heading */
+  font-size: clamp(1.8rem, 5vw, 3rem);
 }
 
 .tagline {
@@ -81,7 +69,6 @@ video:focus {
   opacity: 0.95;
 }
 
-/* Responsive container that centres and caps the width */
 .container {
   width: 90%;
   max-width: 880px;
@@ -95,7 +82,6 @@ video:focus {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive video: always fits its container */
 .wildlife-video {
   display: block;
   width: 100%;
@@ -103,6 +89,10 @@ video:focus {
   max-width: 100%;
   border-radius: 8px;
   background: #000;
+}
+
+.wildlife-video[hidden] {
+  display: none;
 }
 
 .controls {
@@ -120,7 +110,7 @@ video:focus {
   border-radius: 50px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.1s ease;
-  min-width: 150px; /* large, easy-to-tap target */
+  min-width: 150px;
 }
 .btn:hover {
   background: var(--green);
@@ -141,7 +131,6 @@ video:focus {
   font-size: 0.9rem;
 }
 
-/* ----- Responsive breakpoints ----- */
 @media (max-width: 600px) {
   .container {
     width: 94%;
@@ -151,11 +140,10 @@ video:focus {
     padding: 1rem;
   }
   .btn {
-    width: 100%; /* full-width button on small screens */
+    width: 100%;
   }
 }
 
-/* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;

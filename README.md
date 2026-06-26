@@ -20,9 +20,6 @@ A small promotional web page for a wildlife conservation organization, built wit
 - **Responsive design**: fluid heading, flexible container, responsive video and
   a mobile breakpoint.
 
-## Add your video
-Place your video file named **`wildlife.mp4`** (and an optional `poster.jpg`)
-in the project root next to `index.html`.
 
 ## Live page
-Served via GitHub Pages — see the repository's Pages link.
+Served via GitHub Pages
